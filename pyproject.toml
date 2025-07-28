@@ -1,22 +1,25 @@
 [project]
-name = "NetworkSecurity"
-version = "0.0.1"
+name = "network-security-system"
+version = "0.1.0"
 description = "Phishing URL detection system"
 readme = "README.md"
 requires-python = ">=3.11"
-authors = [
-  { name="Yash Masane", email="masaneyash6@gmail.com" }
-]
+authors = [{name = "Yash Masane", email = "masaneyash6@gmail.com"}]
 
 dependencies = [
     "certifi>=2025.7.14",
+    "dotenv>=0.9.9",
     "numpy>=2.3.2",
     "pandas>=2.3.1",
     "pymongo>=4.13.2",
     "scikit-learn>=1.7.1",
-    "setuptools>=80.9.0"
+    "setuptools>=80.9.0",
 ]
+
+[tool.setuptools]
+packages = ["network_security"]  # Tell setuptools to only use this folder
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
